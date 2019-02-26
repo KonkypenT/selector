@@ -1,4 +1,4 @@
-# selector
+# selecTOR
 Plugin for new custom select. We can stylize and change the elements of the select as we like.
 
 The script.js file has several functions, but we need only some of them.
