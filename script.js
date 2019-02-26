@@ -21,7 +21,7 @@ function createSelect() {
     clickOnSelect();
 } createSelect();
 
-function select(item, array) {
+function fillSelect(item, array) {
     let option = item.children[1];
     let row = '';
     for (let i = 0; i < array.length; i++) {
@@ -30,6 +30,55 @@ function select(item, array) {
                 </div>`;
     }
     option.innerHTML = row;
+}
+
+function styleSelect(item, array) {
+    if (Object.keys(array == 'select')) {
+        let params = array.select;
+        for (let i = 0; i < params.length; i++) {
+            if (params[i].bGround) {
+                item.children[0].style.backgroundColor = params[i].bGround;
+            } 
+            if (params[i].fColor) {
+                item.children[0].style.color = params[i].fColor;
+            }
+            if (params[i].bColor) {
+                item.children[0].style.borderColor = params[i].bColor;
+            }
+            if (params[i].border) {
+                item.children[0].style.border = params[i].border;
+            }
+            if (params[i].bRadius) {
+                item.children[0].style.borderRadius = params[i].bRadius;
+            }
+            if (params[i].text) {
+                item.children[0].children[0].textContent = params[i].text;
+            }
+        }
+    }
+    if (Object.keys(array == 'option')) {
+        let params = array.option;
+        for (let i = 0; i < params.length; i++) {
+            if (params[i].fColor) {
+                for (let j = 0; j < item.children[1].children.length; j++) {
+                    item.children[1].children[j].style.color = params[i].fColor;
+                }
+            }
+            if (params[i].tBorder) {
+                for (let j = 0; j < item.children[1].children.length; j++) {
+                    item.children[1].children[j].style.borderTop = params[i].tBorder;
+                    item.children[1].children[0].style.borderTop = 'none';
+                }
+            }
+            if (params[i].border) {
+                item.children[1].style.border = params[i].border;
+                item.children[1].style.borderTop = 'none';
+            }
+            if (params[i].bRadius) {
+                item.children[1].style.borderRadius = params[i].bRadius;
+            }
+        }
+    }
 }
 
 function resizeSelect() {
