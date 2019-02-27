@@ -48,8 +48,7 @@
     background-color: #f8f8f8;
 }
 .item-option:hover {
-    background-color: #1E88E5;
-    color: white;
+    background-color: #DDD;
 }
 .item-option:first-child {
     border-top: none;
