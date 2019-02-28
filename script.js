@@ -112,6 +112,8 @@ function clickOnOption(title) {
         item.onclick = function() {
             let text = item.textContent.trim();
             title.textContent = text;
+            let parent = title.parentElement;
+            parent.dataset.id = item.dataset.id;
             title.style.opacity = '1';
         };
     });
