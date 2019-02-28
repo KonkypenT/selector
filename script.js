@@ -1,3 +1,4 @@
+"use strict";
 function createSelect() {
     let selects = document.getElementsByClassName('item-select');
     let row = '';
