@@ -6,9 +6,6 @@
 .item-select {
     width: 250px;
 }
-.item-select:nth-child(2) {
-    padding-right: 0;
-}
 .custom-select{
     width: 100%;
     height: 35px;
@@ -22,6 +19,10 @@
 }
 .title-select {
     opacity: .6;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 .option-custom-select {
     position: absolute;
@@ -52,4 +53,16 @@
 }
 .item-option:first-child {
     border-top: none;
+}
+
+.item-select-text input {
+    height: 95%;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    padding-right: 10px;
+}
+
+.item-select-text .title-select {
+    opacity: 1;
 }
